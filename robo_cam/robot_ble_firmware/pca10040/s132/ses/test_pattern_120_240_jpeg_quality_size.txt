@@ -1,0 +1,7 @@
+normal:18302
+lowest:5332
+lower:7811
+low:10933
+higher:20519
+highest:23346
+
