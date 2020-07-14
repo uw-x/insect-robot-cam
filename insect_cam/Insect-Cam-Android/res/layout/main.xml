@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.nordicsemi.ImageTransferDemo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FF999999">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Connect" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageTransfered"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/textViewImageStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last update 40kbsp"
+            android:gravity="center"
+            style="@style/ImageOverlayText"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewFileLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Incoming file:" />
+
+        <ProgressBar
+            android:id="@+id/progressBarFile"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/buttonTakePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Take Picture" />
+
+        <Button
+            android:id="@+id/buttonStartStream"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Start Stream" />
+        <Button
+            android:id="@+id/buttonStartAccel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Start Accel" />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/filenameLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="   File Name" />
+
+        <TextView
+            android:id="@+id/debugLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Debug" />
+
+        <TextView
+            android:id="@+id/jpegLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Record" />
+        <TextView
+            android:id="@+id/flipLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="  Flip" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/filename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:inputType="text"
+            android:hint="Enter filename" />
+
+        <CheckBox
+            android:id="@+id/debug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1.6"/>
+
+        <CheckBox
+        android:id="@+id/jpeg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1.6"/>
+
+        <CheckBox
+            android:id="@+id/flip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1.6"/>
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewLblRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="Image Res" />
+
+        <TextView
+            android:id="@+id/textViewLblAngle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Angle" />
+
+        <TextView
+            android:id="@+id/textViewLblPhy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:text="Phy" />
+
+        <TextView
+            android:id="@+id/textViewLblCI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Con. Int." />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <Spinner
+            android:id="@+id/spinnerResolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_resolution"
+            android:layout_weight="0.8" />
+
+        <Spinner
+            android:id="@+id/spinnerAngle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:entries="@array/spinner_angle"/>
+
+        <Spinner
+            android:id="@+id/spinnerPhy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:entries="@array/spinner_phy"/>
+
+        <TextView
+            android:id="@+id/textViewCI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <Spinner
+            android:id="@+id/spinnerDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_device"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/regAddr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="0123456789ABCDEF"
+            android:inputType="textCapCharacters"
+            android:hint="0000"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/regVal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="0123456789ABCDEF"
+            android:inputType="textCapCharacters"
+            android:hint="00"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Send"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:id="@+id/textViewLog"
+                android:layout_gravity="center_horizontal" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
