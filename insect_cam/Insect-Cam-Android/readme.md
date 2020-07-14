@@ -1,15 +1,14 @@
-# android-image-transfer-demo
+# InsectCam Android App
 
-This app allows images to be streamed from an nRF52 kit with a connected camera sensor to the application, showing the image and measuring the transfer speed in the process. 
+This companion Android app receives the video stream from our vision system mounted onboard the insect. The corresponding BLE firmware uses the NRF52832 to read image data from the Himax HM01B0 camera and stream it to this Android App. The app receives images and updates the display in real time, and also includes features for logging data and storing the images. It also includes an interface to steer pan the camera right and left, and to capture images when the insect moves and triggers an onboard accelerometer.  
 
-Different image resolutions can be selected in the app, and the BLE phy can be changed between 1Mbps and 2Mbps to demonstrate the difference (this requires a phone that supports 2Mbps). 
+# Setup
+- Download [Android Studio](https://developer.android.com/studio)
+- Open the project in Android Studio
 
 Tested on:   
-- Samsung Galaxy S8    
-	- Up to 1200kbps speed          
-- Samsung Galaxy S6 (1Mbps mode only)   
-	- Up to 90kbps speed
+- Samsung Galaxy S9 (achieved 5 fps framerate using 2 Mbps mode)   
+- Samsung Galaxy S6 (1Mbps mode only, results in lower framerate)   
 
 ### Note
 - Android 4.3 or later is required.
-- Android Studio supported 
