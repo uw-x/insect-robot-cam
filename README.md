@@ -4,13 +4,14 @@ Vision serves as an essential sensory input for insects but consumes substantial
 
 ## Installation and Organization
 This repository includes code for both the insect and robot mounted cameras. They are largely the same with some minor additions in the robot version to control it. The directory structure is shown below:
-.
+```bash
 ├── insect_cam (Robot mounted camera software)
 │   ├── Insect-Cam-Android (Android code)
 │   └── insect_ble_firmware (NRF52832 Bluetooth chip firmware)
 └── robo_cam (Robot mounted camera software)
     ├── Robo-Cam-Android (Android code)
     └── robot_ble_firmware (NRF52832 Bluetooth chip firmware)
+```
 
 ### BLE
 1. Download Segger Embedded Studio
